@@ -24,11 +24,9 @@ BreachType classifyTemperatureBreach(
       lowerLimit = 0;
       upperLimit = 45;
       break;
-    case MED_ACTIVE_COOLING:
+    default:
       lowerLimit = 0;
       upperLimit = 40;
-      break;
-    default:
       break;
   }
   return inferBreach(temperatureInC, lowerLimit, upperLimit);
