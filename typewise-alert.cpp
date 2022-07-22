@@ -63,7 +63,7 @@ void sendToEmail(BreachType breachType) {
       break;
     case TOO_HIGH:
       cout << "To: " << recepient << endl;
-      cout << "Hi, the temperature is too High" << endl;
+      cout << "Hi, the temperature is too high" << endl;
       break;
     default:
       break;
