@@ -1,13 +1,12 @@
 #include "typewise-alert.hpp"
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
-  BreachType returnValue;
+  BreachType returnValue = NORMAL;
   if(value < lowerLimit) {
     returnValue = TOO_LOW;
-  } else if(value > upperLimit) {
+  } 
+  if(value > upperLimit) {
     returnValue = TOO_HIGH;
-  } else {
-    returnValue = NORMAL;
   }
   return returnValue;
 }
@@ -72,4 +71,3 @@ void sendToEmail(BreachType breachType) {
       break;
   }
 }
-
